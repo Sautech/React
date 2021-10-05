@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 function App() {
   return (
     <div className="App">
@@ -8,8 +8,8 @@ function App() {
       <Router>
         <Link to="/home"> Home Page </Link> <br></br>
         <Link to="/about"> About Page </Link>
-        <Home />
-        <About />
+        <Route path="/home"><Home/></Route>
+        <Route path="/about"><About/></Route>
       </Router>
     </div>
   );
