@@ -1,16 +1,18 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Link, Route } from "react-router-dom";
+import Nav from './Nav';
 function App() {
   return (
     <div className="App">
       <h1>Routing setup</h1>
-      <Router>
-        <Link to="/home"> Home Page </Link> <br></br>
-        <Link to="/about"> About Page </Link>
-        <Route path="/home"><Home/></Route>
-        <Route path="/about"><About/></Route>
-      </Router>
+      <Nav/>
+      <Route path="/home">
+        <Home />
+      </Route>
+      <Route path="/about">
+        <About />
+      </Route>
     </div>
   );
 }
